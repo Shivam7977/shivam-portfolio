@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shivam Pandey · AI/ML Engineer</title>
+<meta name="description" content="Shivam Pandey — AI/ML Engineer. SkillBridge and Fund Flow Fraud Detection.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.15.1/devicon.min.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="stars" aria-hidden="true"></div>
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand">
+      <span class="brand-mark">SP</span>
+      <span class="brand-role">Full-stack &amp; AI/ML Engineer</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="assets/resume.pdf" class="btn-outline-glow" download><span>Download CV</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <span class="accent-line" aria-hidden="true"></span>
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">Final-year B.E. CSE (AI/ML) · VIVA Institute of Technology, Mumbai</p>
+        <h1 class="hero-title">Hi, I'm<br><span class="grad-text">Shivam Pandey</span></h1>
+        <div class="typed-line"><span class="tl-dollar">$</span> <span id="typedText"></span><span class="cursor"></span></div>
+        <p class="hero-sub">AI/ML engineer who likes turning messy real-world data into things that actually work — fraud detection pipelines, career platforms, the unglamorous parts included.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View my work</a>
+          <a href="assets/resume.pdf" class="btn btn-secondary" download>Download résumé</a>
+        </div>
+        <div class="stats-row">
+          <div class="stat-chip"><strong>2+</strong><span>AI/ML Projects</span></div>
+          <div class="stat-chip"><strong>Final Year</strong><span>B.E. AI/ML</span></div>
+          <div class="stat-chip"><strong>Open</strong><span>To Internships</span></div>
+          <div class="stat-chip"><strong>Hackathon</strong><span>Participant</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <canvas id="signalCanvas"></canvas>
+      </div>
+    </div>
+
+    <div class="hero-socials">
+      <a href="https://github.com/Shivam7977" target="_blank" rel="noopener" aria-label="GitHub"><i class="devicon-github-original"></i></a>
+      <a href="https://www.linkedin.com/in/shivam-pandey-0336ba336/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="devicon-linkedin-plain"></i></a>
+      <a href="mailto:shivamrajeshpandey9136@gmail.com" aria-label="Email">@</a>
+    </div>
+
+    <div class="scroll-cue" aria-hidden="true"><span></span></div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section" id="about">
+    <div class="section-inner about-grid">
+      <div class="about-copy">
+        <p class="eyebrow">Introduction</p>
+        <h2 class="section-title grad-text-soft">Overview.</h2>
+        <p class="body-text">
+          I'm Shivam Pandey, a final-year B.E. (AI/ML) student who likes turning messy real-world data into systems
+          that actually work. My focus areas: machine learning, fraud detection, graph analytics, and LLM-powered
+          applications. Currently looking for AI/ML and Data Science internship opportunities — feel free to reach out at
+          <a href="mailto:shivamrajeshpandey9136@gmail.com" class="inline-link">shivamrajeshpandey9136@gmail.com</a>.
+        </p>
+
+        <div class="glow-card edu-card">
+          <div class="glow-card-inner edu-card-inner">
+            <span class="icon-chip chip-violet edu-icon">🎓</span>
+            <div>
+              <h3>B.E. Computer Science &amp; Engineering (AI/ML)</h3>
+              <p>VIVA Institute of Technology, Mumbai University</p>
+              <p class="edu-meta">Class of 2027 · CGPA: 8.65</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-actions resume-actions">
+          <a href="assets/resume.pdf" target="_blank" class="btn btn-secondary">View résumé</a>
+          <a href="assets/resume.pdf" class="btn btn-primary" download>Download résumé</a>
+        </div>
+      </div>
+      <div class="about-photo">
+        <div class="glow-ring photo-ring">
+          <div class="glow-ring-inner photo-ring-inner">
+            <img src="assets/img/profile.jpg" alt="Shivam Pandey">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="focus-grid">
+      <div class="glow-card"><div class="glow-card-inner">
+        <span class="icon-chip chip-violet"><i class="devicon-python-plain"></i></span>
+        <h3>Machine Learning</h3><p>Ensembling — XGBoost, Isolation Forest, scikit-learn.</p>
+      </div></div>
+      <div class="glow-card"><div class="glow-card-inner">
+        <span class="icon-chip chip-cyan"><span class="ti-icon">⛓</span></span>
+        <h3>Graph Analytics</h3><p>Modeling fund-flow networks with NetworkX to surface fraud topology.</p>
+      </div></div>
+      <div class="glow-card"><div class="glow-card-inner">
+        <span class="icon-chip chip-pink"><i class="devicon-flask-original"></i></span>
+        <h3>Backend Systems</h3><p>Flask + MongoDB APIs, auth, rate-limiting, clean data models.</p>
+      </div></div>
+      <div class="glow-card"><div class="glow-card-inner">
+        <span class="icon-chip chip-amber"><span class="ti-icon">⚑</span></span>
+        <h3>Fraud &amp; Risk</h3><p>Feature engineering and thresholding for highly imbalanced data.</p>
+      </div></div>
+      <div class="glow-card"><div class="glow-card-inner">
+        <span class="icon-chip chip-teal"><span class="ti-icon">✦</span></span>
+        <h3>LLM Integration</h3><p>Mistral-powered mock interviews with adaptive difficulty.</p>
+      </div></div>
+      <div class="glow-card"><div class="glow-card-inner">
+        <span class="icon-chip chip-violet"><i class="devicon-tailwindcss-plain"></i></span>
+        <h3>Frontend</h3><p>Tailwind CSS, AJAX-driven UI, dark mode, responsive layouts.</p>
+      </div></div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS / TECHNOLOGIES ===== -->
+  <section class="section" id="skills">
+    <div class="section-inner center-head">
+      <p class="eyebrow">My tools</p>
+      <h2 class="section-title glow-cyan">Technologies.</h2>
+    </div>
+
+    <div class="skill-category">
+      <h3 class="skill-cat-label">Programming</h3>
+      <div class="icon-grid">
+        <div class="icon-item"><div class="glow-ring icon-ring"><div class="glow-ring-inner icon-ring-inner"><i class="devicon-python-plain"></i></div></div><span>Python</span></div>
+        <div class="icon-item"><div class="glow-ring icon-ring"><div class="glow-ring-inner icon-ring-inner"><i class="devicon-javascript-plain"></i></div></div><span>JavaScript</span></div>
+        <div class="icon-item"><div class="glow-ring icon-ring"><div class="glow-ring-inner icon-ring-inner"><i class="devicon-html5-plain"></i></div></div><span>HTML5</span></div>
+        <div class="icon-item"><div class="glow-ring icon-ring"><div class="glow-ring-inner icon-ring-inner"><i class="devicon-css3-plain"></i></div></div><span>CSS3</span></div>
+      </div>
+    </div>
+
+    <div class="skill-category">
+      <h3 class="skill-cat-label">Machine Learning &amp; AI</h3>
+      <div class="icon-grid">
+        <div class="icon-item"><div class="glow-ring icon-ring"><div class="glow-ring-inner icon-ring-inner"><i class="devicon-pandas-original"></i></div></div><span>Pandas</span></div>
+        <div class="icon-item"><div class="glow-ring icon-ring"><div class="glow-ring-inner icon-ring-inner"><i class="devicon-numpy-original"></i></div></div><span>NumPy</span></div>
+        <div class="icon-item"><div class="glow-ring icon-ring"><div class="glow-ring-inner icon-ring-inner"><i class="devicon-scikitlearn-plain"></i></div></div><span>scikit-learn</span></div>
+        <div class="icon-item"><div class="glow-ring icon-ring"><div class="glow-ring-inner icon-ring-inner"><span class="badge-text">XGB</span></div></div><span>XGBoost</span></div>
+        <div class="icon-item"><div class="glow-ring icon-ring"><div class="glow-ring-inner icon-ring-inner"><span class="badge-text">NX</span></div></div><span>NetworkX</span></div>
+        <div class="icon-item"><div class="glow-ring icon-ring"><div class="glow-ring-inner icon-ring-inner"><span class="badge-text">AI</span></div></div><span>Mistral AI</span></div>
+      </div>
+    </div>
+
+    <div class="skill-category">
+      <h3 class="skill-cat-label">Backend &amp; Database</h3>
+      <div class="icon-grid">
+        <div class="icon-item"><div class="glow-ring icon-ring"><div class="glow-ring-inner icon-ring-inner"><i class="devicon-flask-original"></i></div></div><span>Flask</span></div>
+        <div class="icon-item"><div class="glow-ring icon-ring"><div class="glow-ring-inner icon-ring-inner"><i class="devicon-mongodb-plain"></i></div></div><span>MongoDB</span></div>
+        <div class="icon-item"><div class="glow-ring icon-ring"><div class="glow-ring-inner icon-ring-inner"><i class="devicon-tailwindcss-plain"></i></div></div><span>Tailwind</span></div>
+        <div class="icon-item"><div class="glow-ring icon-ring"><div class="glow-ring-inner icon-ring-inner"><span class="badge-text">bc</span></div></div><span>bcrypt</span></div>
+      </div>
+    </div>
+
+    <div class="skill-category">
+      <h3 class="skill-cat-label">Tools</h3>
+      <div class="icon-grid">
+        <div class="icon-item"><div class="glow-ring icon-ring"><div class="glow-ring-inner icon-ring-inner"><i class="devicon-git-plain"></i></div></div><span>Git</span></div>
+        <div class="icon-item"><div class="glow-ring icon-ring"><div class="glow-ring-inner icon-ring-inner"><i class="devicon-github-original"></i></div></div><span>GitHub</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="section" id="projects">
+    <div class="section-inner">
+      <p class="eyebrow">My work</p>
+      <h2 class="section-title grad-text-soft">Projects.</h2>
+      <p class="body-text">The two projects I've put the most into — one live and in use, one a deep dive into fraud analytics.</p>
+    </div>
+
+    <div class="project-grid">
+
+      <article class="project-card">
+        <div class="project-thumb thumb-skillbridge">
+          <div class="thumb-deco" aria-hidden="true">
+            <span class="deco-blob blob-1"></span><span class="deco-blob blob-2"></span>
+            <span class="deco-ring"></span>
+          </div>
+          <span class="thumb-title">SkillBridge</span>
+          <div class="thumb-actions">
+            <a href="https://github.com/Shivam7977/SkillBridge-Platform" target="_blank" rel="noopener" aria-label="Code"><i class="devicon-github-original"></i></a>
+            <a href="https://skillbridge-platform-bszo.onrender.com/" target="_blank" rel="noopener" aria-label="Live demo">↗</a>
+          </div>
+        </div>
+        <div class="project-info">
+          <p><strong>AI-Powered Career OS for developers.</strong> Takes your current skills and career goal, generates a personalized stage-by-stage roadmap, and automatically builds your portfolio and resume as you progress.</p>
+          <ul class="feature-checklist">
+            <li>AI Mock Interview Room — Mistral AI, adaptive difficulty, XP rewards</li>
+            <li>AI-powered roadmap generator + project recommendations</li>
+            <li>ATS-friendly resume builder &amp; portfolio generator</li>
+            <li>Community hub, XP/streaks/leaderboards, admin dashboard</li>
+          </ul>
+          <ul class="project-tags">
+            <li>Flask</li><li>MongoDB</li><li>Mistral AI</li><li>AJAX</li><li>Tailwind CSS</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-thumb thumb-fundflow">
+          <div class="thumb-deco" aria-hidden="true">
+            <span class="deco-blob blob-3"></span><span class="deco-blob blob-4"></span>
+            <span class="deco-ring ring-2"></span>
+          </div>
+          <span class="thumb-title">Fund Flow</span>
+          <div class="thumb-actions">
+            <a href="https://github.com/Shivam7977/fund-flow-fraud" target="_blank" rel="noopener" aria-label="Code"><i class="devicon-github-original"></i></a>
+            <a href="https://nbviewer.org/github/Shivam7977/fund-flow-fraud/blob/main/notebooks/01_EDA.ipynb" target="_blank" rel="noopener" aria-label="View notebook">↗</a>
+          </div>
+        </div>
+        <div class="project-info">
+          <p>A fraud-detection system mapped onto India's payment rails — UPI, NEFT, RTGS, IMPS, NACH — built on the PaySim dataset (6.36M transactions).</p>
+          <ul class="feature-checklist">
+            <li>XGBoost + Isolation Forest ensemble, AUC-weighted blending</li>
+            <li>XGBoost AUC: <strong>0.9998</strong> · Isolation Forest AUC: <strong>0.9105</strong></li>
+            <li>NetworkX graph analytics — fan-out, round-trip &amp; layering detection</li>
+            <li>F1-maximized threshold selection on the precision-recall curve</li>
+          </ul>
+          <ul class="project-tags">
+            <li>Python</li><li>XGBoost</li><li>Isolation Forest</li><li>NetworkX</li><li>Pandas</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="more-projects">
+      <a href="https://github.com/Shivam7977" target="_blank" rel="noopener" class="btn btn-secondary">More on GitHub <i class="devicon-github-original"></i></a>
+    </div>
+  </section>
+
+  <!-- ===== CERTIFICATIONS & ACHIEVEMENTS ===== -->
+  <section class="section" id="achievements">
+    <div class="section-inner">
+      <p class="eyebrow">Beyond the code</p>
+      <h2 class="section-title grad-text-soft">Certifications &amp; Achievements.</h2>
+    </div>
+
+    <div class="dual-grid">
+      <div>
+        <h3 class="sub-head">Certifications</h3>
+        <div class="glow-card cert-card"><div class="glow-card-inner cert-card-inner">
+          <span class="icon-chip chip-cyan">📜</span>
+          <div>
+            <h4>Python for Data Science</h4>
+            <p>NPTEL (IIT Madras) · Elite Certification · Jul–Aug 2025</p>
+          </div>
+        </div></div>
+        <div class="glow-card cert-card"><div class="glow-card-inner cert-card-inner">
+          <span class="icon-chip chip-teal">📜</span>
+          <div>
+            <h4>Prime — AI/ML Job Preparation <span class="status-tag">In Progress</span></h4>
+            <p>Apna College · Started Mar 2026 · Currently: Python &amp; Data (Pandas, NumPy)</p>
+          </div>
+        </div></div>
+      </div>
+
+      <div>
+        <h3 class="sub-head">Hackathons</h3>
+        <div class="glow-card cert-card"><div class="glow-card-inner cert-card-inner">
+          <span class="icon-chip chip-amber">🏆</span>
+          <div>
+            <h4>Smart India Hackathon (SIH)</h4>
+            <p>Selected at college-level internal round</p>
+          </div>
+        </div></div>
+        <div class="glow-card cert-card"><div class="glow-card-inner cert-card-inner">
+          <span class="icon-chip chip-pink">🏆</span>
+          <div>
+            <h4>Aarohan 1.0 Hackathon</h4>
+            <p>Team Pi · Certificate of Participation · CSI-RAIT</p>
+          </div>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GITHUB ACTIVITY ===== -->
+  <section class="section" id="github-activity">
+    <div class="section-inner center-head">
+      <p class="eyebrow">Always shipping</p>
+      <h2 class="section-title glow-cyan">GitHub Activity.</h2>
+    </div>
+    <div class="github-embed">
+      <img src="https://github-readme-stats.vercel.app/api?username=Shivam7977&show_icons=true&theme=midnight-purple&hide_border=true&bg_color=00000000" alt="Shivam's GitHub stats" loading="lazy">
+      <img src="https://github-readme-streak-stats.herokuapp.com/?user=Shivam7977&theme=midnight-purple&hide_border=true&background=00000000" alt="Shivam's GitHub streak" loading="lazy">
+    </div>
+    <div class="more-projects">
+      <a href="https://github.com/Shivam7977" target="_blank" rel="noopener" class="btn btn-secondary">@Shivam7977 on GitHub <i class="devicon-github-original"></i></a>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section" id="contact">
+    <div class="section-inner contact-grid">
+      <div class="contact-copy">
+        <p class="eyebrow">Get in touch</p>
+        <h2 class="section-title grad-text-soft">Contact.</h2>
+        <p class="body-text">Open to AI/ML and Data Science internships and roles. Drop a message, or reach me directly:</p>
+        <ul class="contact-list">
+          <li>📍 Mumbai, India</li>
+          <li><a href="mailto:shivamrajeshpandey9136@gmail.com">shivamrajeshpandey9136@gmail.com</a></li>
+          <li><a href="https://github.com/Shivam7977" target="_blank" rel="noopener">github.com/Shivam7977</a></li>
+          <li><a href="https://www.linkedin.com/in/shivam-pandey-0336ba336/" target="_blank" rel="noopener">linkedin.com/in/shivam-pandey</a></li>
+        </ul>
+      </div>
+
+      <form class="glow-card contact-form-wrap" id="contactFormWrap" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <div class="glow-card-inner contact-form-inner">
+          <input type="hidden" name="form-name" value="contact">
+          <p class="hidden-field"><label>Don't fill this out: <input name="bot-field"></label></p>
+          <div class="field"><label for="name">Your name</label><input type="text" id="name" name="name" placeholder="Anjali Pandey" required></div>
+          <div class="field"><label for="email">Your email</label><input type="email" id="email" name="email" placeholder="name@company.com" required></div>
+          <div class="field"><label for="subject">Subject</label><input type="text" id="subject" name="subject" placeholder="Internship opportunity"></div>
+          <div class="field"><label for="message">Message</label><textarea id="message" name="message" rows="4" placeholder="What's on your mind?" required></textarea></div>
+          <button type="submit" class="btn btn-primary btn-full" id="contactSubmit">Send message</button>
+          <p class="form-status" id="formStatus"></p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span>© 2026 Shivam Pandey</span>
+    <div class="footer-socials">
+      <a href="https://github.com/Shivam7977" target="_blank" rel="noopener" aria-label="GitHub"><i class="devicon-github-original"></i></a>
+      <a href="https://www.linkedin.com/in/shivam-pandey-0336ba336/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="devicon-linkedin-plain"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
