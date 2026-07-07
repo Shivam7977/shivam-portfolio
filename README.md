@@ -135,8 +135,8 @@ Fraud detection mapped onto India's payment rails (UPI, NEFT, RTGS, IMPS, NACH),
 Clone and open locally — no build step required:
 
 ```bash
-git clone https://github.com/Shivam7977/<shivam-portfolio>.git
-cd <shivam-portfolio>
+git clone https://github.com/Shivam7977/shivam-portfolio.git
+cd shivam-portfolio
 ```
 
 Then open `index.html` directly in your browser, or serve it locally:
