@@ -35,7 +35,7 @@ This repo is the source for my personal portfolio site — where I showcase my w
 
 | | |
 |---|---|
-| 🎓 **Education** | B.E. Computer Science & Engineering (AI/ML), VIVA Institute of Technology, Mumbai University — Class of 2027, CGPA 8.65 |
+| 🎓 **Education** | B.E. Computer Science & Engineering (AI/ML), VIVA Institute of Technology, Mumbai University — Class of 2027, CGPA 8.82 |
 | 🎯 **Status** | Open to AI/ML & Data Science internship opportunities |
 | 🧠 **Focus** | Machine Learning · Fraud & Risk · Graph Analytics · LLM Integration · Full-stack (Flask + MongoDB) |
 
