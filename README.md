@@ -62,22 +62,23 @@ This repo is the source for my personal portfolio site — where I showcase my w
 
 Generates a personalized, stage-by-stage career roadmap and builds your portfolio/resume as you progress.
 
-- AI Mock Interview Room — Mistral AI, adaptive difficulty, XP rewards
-- AI-powered roadmap generator with project recommendations
+- AI Mock Interview Room with adaptive difficulty and XP rewards
+- Groq-powered roadmap generator; only an allow-list of profile fields reaches the LLM
 - ATS-friendly resume builder & portfolio generator
 - Community hub with XP, streaks, leaderboards, and an admin dashboard
 
-`Flask` · `MongoDB` · `Mistral AI` · `AJAX` · `Tailwind CSS`
+`Flask` · `MongoDB` · `Groq` · `AJAX` · `Tailwind CSS`
 
 ### 🕸️ [Fund Flow Fraud Detection](https://github.com/Shivam7977/fund-flow-fraud)
 Fraud detection mapped onto India's payment rails (UPI, NEFT, RTGS, IMPS, NACH), built on the PaySim dataset — 6.36M transactions.
 
-- XGBoost + Isolation Forest ensemble with AUC-weighted blending
-- **XGBoost AUC: 0.9998** · **Isolation Forest AUC: 0.9105**
-- NetworkX graph analytics for fan-out, round-trip & layering detection
-- F1-maximized threshold selection on the precision-recall curve
+- Isolation Forest + 2 XGBoost models, combined with NetworkX graph patterns
+- **Held-out result: F1 0.89** · **PR-AUC 0.95**
+- NetworkX graph patterns for round-trip, structuring, and fan-in/fan-out
+- TreeSHAP explains XGBoost predictions; leakage audit improved evaluation reliability
+- **Trade-off:** PaySim is synthetic, so real-world performance will differ
 
-`Python` · `XGBoost` · `Isolation Forest` · `NetworkX` · `Pandas`
+`Python` · `FastAPI` · `PostgreSQL` · `XGBoost` · `NetworkX` · `SHAP`
 
 ---
 
@@ -181,4 +182,4 @@ python -m http.server 5500
 
 <div align="center">
 <sub>© 2026 Shivam Pandey · Built with HTML, CSS & vanilla JS</sub>
-</div>
+</div>v
