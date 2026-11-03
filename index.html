@@ -1,365 +1,352 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shivam Pandey · AI/ML Engineer</title>
-<meta name="description" content="Shivam Pandey — AI/ML Engineer. SkillBridge and Fund Flow Fraud Detection.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.15.1/devicon.min.css">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shivam Pandey · ML and AI Engineer</title>
+  <meta name="description" content="Final-year CSE (AI/ML) student in Mumbai. I build ML systems and the apps around them: fraud detection, private PDF Q&A and an AI career platform. Open to internships." />
+  <meta name="theme-color" content="#f6f2ea" />
+  <meta property="og:title" content="Shivam Pandey · ML and AI Engineer" />
+  <meta property="og:description" content="Fraud detection, private document Q&A and AI career tools. Open to internships." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (!t) t = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
 </head>
 <body>
+  <a class="skip" href="#main">Skip to content</a>
 
-<div class="stars" aria-hidden="true"></div>
-<div class="scroll-progress" id="scrollProgress"></div>
-
-<header class="nav" id="nav">
-  <div class="nav-inner">
-    <a href="#top" class="brand">
-      <span class="brand-mark">SP</span>
-      <span class="brand-role">Full-stack &amp; AI/ML Engineer</span>
-    </a>
-    <nav class="nav-links" id="navLinks">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Work</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <div class="nav-actions">
-      <a href="assets/resume.pdf" class="btn-outline-glow" download><span>Download CV</span></a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </div>
-</header>
-
-<main id="top">
-
-  <!-- ===== HERO ===== -->
-  <section class="hero">
-    <span class="accent-line" aria-hidden="true"></span>
-    <div class="hero-inner">
-      <div class="hero-copy">
-        <p class="eyebrow">Final-year B.E. CSE (AI/ML) · VIVA Institute of Technology, Mumbai</p>
-        <h1 class="hero-title">Hi, I'm<br><span class="grad-text">Shivam Pandey</span></h1>
-        <div class="typed-line"><span class="tl-dollar">$</span> <span id="typedText"></span><span class="cursor"></span></div>
-        <p class="hero-sub">AI/ML engineer who likes turning messy real-world data into things that actually work — fraud detection pipelines, career platforms, the unglamorous parts included.</p>
-        <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary">View my work</a>
-          <a href="assets/resume.pdf" class="btn btn-secondary" download>Download résumé</a>
-        </div>
-        <div class="stats-row">
-          <div class="stat-chip"><strong>2+</strong><span>AI/ML Projects</span></div>
-          <div class="stat-chip"><strong>Final Year</strong><span>B.E. AI/ML</span></div>
-          <div class="stat-chip"><strong>Open</strong><span>To Internships</span></div>
-          <div class="stat-chip"><strong>Hackathon</strong><span>Participant</span></div>
-        </div>
-      </div>
-
-      <div class="hero-visual" aria-hidden="true">
-        <canvas id="signalCanvas"></canvas>
+  <!-- ============ NAVBAR ============ -->
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="#top" class="logo" aria-label="Shivam.dev home">
+        <span class="logo-mark" aria-hidden="true">SP</span>
+        <span class="logo-text">shivam<em>.dev</em></span>
+      </a>
+      <nav class="nav-links" id="nav-links" aria-label="Main">
+        <a href="#work" class="nav-link">Work</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#blog" class="nav-link">Bug log</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-tools">
+        <button class="sq-btn" id="theme-toggle" type="button" aria-label="Switch to dark mode"></button>
+        <button class="sq-btn nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+        </button>
       </div>
     </div>
+  </header>
 
-    <div class="hero-socials">
-      <a href="https://github.com/Shivam7977" target="_blank" rel="noopener" aria-label="GitHub"><i class="devicon-github-original"></i></a>
-      <a href="https://www.linkedin.com/in/shivam-pandey-0336ba336/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="devicon-linkedin-plain"></i></a>
-      <a href="mailto:shivamrajeshpandey9136@gmail.com" aria-label="Email">@</a>
-    </div>
+  <main id="main">
+    <span id="top"></span>
 
-    <div class="scroll-cue" aria-hidden="true"><span></span></div>
-  </section>
+    <!-- ============ HERO ============ -->
+    <section class="sec grid-bg hero-sec">
+      <div class="wrap hero">
+        <div class="hero-text">
+          <h1>Hi, I'm Shivam&nbsp;Pandey. I build ML systems and the apps around them.</h1>
+          <p class="lead">I'm a final-year CSE (AI/ML) student in Mumbai. Bring me messy data and a real problem, and I'll take it from model to a working app, with the evaluation to back it up.</p>
+          <div class="btn-row">
+            <a class="btn primary" href="#work">See my work <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a class="btn" href="#contact">Contact me</a>
+          </div>
+        </div>
+        <figure class="photo">
+          <img src="assets/img/profile.jpg" alt="Photo of Shivam Pandey" width="520" height="620" />
+          <figcaption class="tag">aka Shivam7977</figcaption>
+        </figure>
+      </div>
+    </section>
 
-  <!-- ===== ABOUT ===== -->
-  <section class="section" id="about">
-    <div class="section-inner about-grid">
-      <div class="about-copy">
-        <p class="eyebrow">Introduction</p>
-        <h2 class="section-title grad-text-soft">Overview.</h2>
-        <p class="body-text">
-          I'm Shivam Pandey, a final-year B.E. (AI/ML) student who likes turning messy real-world data into systems
-          that actually work. My focus areas: machine learning, fraud detection, graph analytics, and LLM-powered
-          applications. Currently looking for AI/ML and Data Science internship opportunities — feel free to reach out at
-          <a href="mailto:shivamrajeshpandey9136@gmail.com" class="inline-link">shivamrajeshpandey9136@gmail.com</a>.
-        </p>
+    <!-- ============ WORK ============ -->
+    <section id="work" class="sec grid-bg">
+      <div class="wrap">
+        <h2>Work</h2>
+        <p class="sec-lead">Things I've built. Two have a live demo, and the code for all three is public.</p>
 
-        <div class="glow-card edu-card">
-          <div class="glow-card-inner edu-card-inner">
-            <span class="icon-chip chip-violet edu-icon">🎓</span>
+        <div class="project-grid">
+
+          <article class="card project">
+            <div class="shot">
+              <div class="titlecard t-fund" aria-hidden="true">
+                <div class="tc-text">
+                  <strong>Fund Flow</strong>
+                  <span>Catch fraud rings, not just fraud rows</span>
+                  <small>PaySim · 6.36M transactions · XGBoost + graph checks</small>
+                </div>
+                <div class="tc-panel"><div><b>0.89</b><i>F1</i></div><div><b>0.95</b><i>PR-AUC</i></div><div><b>0.13%</b><i>Fraud rate</i></div></div>
+              </div>
+              <img src="assets/img/fund-flow.png" alt="Screenshot of the Fund Flow Fraud Detection dashboard" loading="lazy" onerror="this.remove()" />
+              <span class="badge live">Live</span>
+            </div>
+            <div class="p-body">
+              <p class="cat">Fraud detection platform</p>
+              <h3>Fund Flow Fraud Detection</h3>
+              <p>Fraud is 0.13% of transactions and fraudsters work in rings, so a row-by-row model misses them. This blends XGBoost and Isolation Forest with account-graph checks, and explains every score with TreeSHAP.</p>
+              <p class="stack">Python · FastAPI · PostgreSQL · XGBoost · NetworkX</p>
+              <div class="btn-row sm">
+                <button class="btn primary" type="button" data-case="case-fund">Case study <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <a class="btn" href="https://fraudfindergraph-e14t.onrender.com" target="_blank" rel="noopener">Visit <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="vh"> (opens in a new tab)</span></a>
+                <a class="ulink" href="https://github.com/Shivam7977/fund-flow-fraud" target="_blank" rel="noopener">Source<span class="vh"> (opens in a new tab)</span></a>
+              </div>
+              <p class="note">Guest mode needs no sign-up.</p>
+            </div>
+          </article>
+
+          <article class="card project">
+            <div class="shot">
+              <div class="titlecard t-doc" aria-hidden="true">
+                <div class="tc-text">
+                  <strong>DocQuery</strong>
+                  <span>Chat with your PDFs, privately</span>
+                  <small>Hybrid search · page-level citations · runs on your machine</small>
+                </div>
+                <div class="tc-panel"><div><b>76.7%</b><i>Dense only</i></div><div><b>90.0%</b><i>Hybrid + rerank</i></div><div><b>30</b><i>Eval questions</i></div></div>
+              </div>
+              <img src="assets/img/docquery.png" alt="Screenshot of DocQuery answering a question with page citations" loading="lazy" onerror="this.remove()" />
+              <span class="badge">Runs locally</span>
+            </div>
+            <div class="p-body">
+              <p class="cat">Private document Q&amp;A</p>
+              <h3>DocQuery</h3>
+              <p>Ask questions about your own PDFs and get answers with source-file and page citations. Parsing, embeddings, retrieval and the language model all run on your machine.</p>
+              <p class="stack">FastAPI · PostgreSQL · pgvector · BM25 · Ollama · Docker</p>
+              <div class="btn-row sm">
+                <button class="btn primary" type="button" data-case="case-doc">Case study <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <a class="ulink" href="https://github.com/Shivam7977/DocQuery" target="_blank" rel="noopener">Source<span class="vh"> (opens in a new tab)</span></a>
+              </div>
+              <p class="note">Local-first, so there is no hosted demo.</p>
+            </div>
+          </article>
+
+          <article class="card project">
+            <div class="shot">
+              <div class="titlecard t-skill" aria-hidden="true">
+                <div class="tc-text">
+                  <strong>SkillBridge</strong>
+                  <span>From career goal to roadmap, resume and portfolio</span>
+                  <small>Groq roadmaps · mock interviews · 19 resume templates</small>
+                </div>
+                <div class="tc-panel"><div><b>34</b><i>Python tests</i></div><div><b>33</b><i>Browser checks</i></div><div><b>6</b><i>Portfolio templates</i></div></div>
+              </div>
+              <img src="assets/img/skillbridge.png" alt="Screenshot of the SkillBridge roadmap page" loading="lazy" onerror="this.remove()" />
+              <span class="badge live">Live</span>
+            </div>
+            <div class="p-body">
+              <p class="cat">AI career platform</p>
+              <h3>SkillBridge</h3>
+              <p>Students don't know what to learn next, and their resume falls behind what they build. SkillBridge generates a roadmap, runs mock interviews, and builds the resume and portfolio as you progress.</p>
+              <p class="stack">Flask · MongoDB · Groq · Tailwind CSS · GitHub Actions</p>
+              <div class="btn-row sm">
+                <button class="btn primary" type="button" data-case="case-skill">Case study <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <a class="btn" href="https://skillbridge-platform-bszo.onrender.com/" target="_blank" rel="noopener">Visit <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="vh"> (opens in a new tab)</span></a>
+                <a class="ulink" href="https://github.com/Shivam7977/SkillBridge-Platform" target="_blank" rel="noopener">Source<span class="vh"> (opens in a new tab)</span></a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section id="services" class="sec plain-bg">
+      <div class="wrap">
+        <h2>What I can do for you</h2>
+        <div class="service-grid">
+          <article class="card service">
             <div>
-              <h3>B.E. Computer Science &amp; Engineering (AI/ML)</h3>
-              <p>VIVA Institute of Technology, Mumbai University</p>
-              <p class="edu-meta">Class of 2027 · CGPA: 8.82</p>
+              <h3>ML and Data Science</h3>
+              <p>Feature engineering, imbalanced data, model training and honest evaluation. I check for leakage before I quote a metric, and I report the held-out number.</p>
+            </div>
+            <a class="ulink" href="#contact">Talk about a data problem <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </article>
+          <article class="card service">
+            <div>
+              <h3>RAG and LLM apps</h3>
+              <p>Retrieval over your documents with hybrid search, reranking and citations, running locally or with a hosted model, and measured on a real evaluation set.</p>
+            </div>
+            <a class="ulink" href="#contact">Talk about a RAG project <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </article>
+          <article class="card service">
+            <div>
+              <h3>APIs and full-stack apps</h3>
+              <p>FastAPI or Flask backends with auth, Postgres or MongoDB, tests and deployment, so a model becomes something people can actually use.</p>
+            </div>
+            <a class="ulink" href="#contact">Talk about an app <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="sec grid-bg">
+      <div class="wrap about">
+        <div class="about-text">
+          <h2>About</h2>
+          <p>I'm Shivam Pandey, a final-year B.E. student in Computer Science and Engineering (AI/ML) at VIVA Institute of Technology, Mumbai. I care about two things: models that are evaluated honestly, and code that holds up when someone else touches it.</p>
+          <p>Fund Flow started with a headline AUC of 0.9998. I audited it for leakage, rebuilt the evaluation, and reported the lower held-out numbers instead. I'd rather ship a smaller number I can defend.</p>
+          <p>I'm looking for Data Science, ML Engineering and AI Engineering internships, in Mumbai or remote.</p>
+        </div>
+
+        <aside class="card started" aria-labelledby="started-h">
+          <h3 id="started-h">Started</h3>
+          <!-- Replace each left label with "Mon YYYY" once you have the real dates -->
+          <ul>
+            <li><span class="mono">Live</span><a class="ulink" href="#work">Fund Flow Fraud Detection</a></li>
+            <li><span class="mono">Live</span><a class="ulink" href="#work">SkillBridge</a></li>
+            <li><span class="mono">Local</span><a class="ulink" href="#work">DocQuery</a></li>
+            <li><span class="mono">Building</span><span><b>Improving DocQuery retrieval</b> <span class="muted"></span></span></li>
+            <li><span class="mono">Building</span><span><b>Improving the Fund Flow model</b> <span class="muted"></span></span></li>
+            <li><span class="mono">Learning</span><span><b>Apna College Prime AI/ML</b> <span class="muted">(since Mar 2026)</span></span></li>
+            <li><span class="mono">Certified</span><span><b>NPTEL Python for Data Science</b> <span class="muted">(IIT Madras, Elite)</span></span></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section id="skills" class="sec plain-bg">
+      <div class="wrap">
+        <h2>Skills</h2>
+        <p class="sec-lead">What I use to build and evaluate things.</p>
+        <div class="card skills">
+          <div class="s-row"><h3>Languages</h3><ul><li>Python</li><li>SQL</li><li>JavaScript</li><li>HTML</li><li>CSS</li></ul></div>
+          <div class="s-row"><h3>ML and data</h3><ul><li>XGBoost</li><li>scikit-learn</li><li>Isolation Forest</li><li>TreeSHAP</li><li>NetworkX</li><li>Pandas</li><li>NumPy</li><li>SMOTE</li></ul></div>
+          <div class="s-row"><h3>GenAI</h3><ul><li>RAG</li><li>BM25</li><li>Reciprocal Rank Fusion</li><li>Reranking</li><li>Sentence Transformers</li><li>Ollama</li><li>Groq</li></ul></div>
+          <div class="s-row"><h3>Backend</h3><ul><li>FastAPI</li><li>Flask</li><li>REST APIs</li><li>Session auth</li><li>Google OAuth</li></ul></div>
+          <div class="s-row"><h3>Frontend</h3><ul><li>Tailwind CSS</li><li>Jinja2</li></ul></div>
+          <div class="s-row"><h3>Databases</h3><ul><li>PostgreSQL</li><li>pgvector</li><li>MongoDB</li><li>SQLite</li></ul></div>
+          <div class="s-row"><h3>Tools</h3><ul><li>Git</li><li>GitHub Actions</li><li>Docker</li><li>Render</li><li>Netlify</li><li>unittest</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BUG LOG ============ -->
+    <section id="blog" class="sec grid-bg">
+      <div class="wrap">
+        <h2>Bug log</h2>
+        <p class="sec-lead">Real bugs I tracked down while building these projects.</p>
+        <div class="log-grid">
+          <article class="card log">
+            <p class="cat">Model fix · Fund Flow</p>
+            <h3>Averaging the graph signals hid the worst fraud</h3>
+            <p>My first graph score was the sum of three rule flags divided by three, so a clear round-trip scored low whenever the other two rules were quiet. I switched to a severity-weighted maximum (round-trip 0.9, structuring 0.8, fan-out and fan-in 0.7). The final score now takes the higher of the model blend and the graph score.</p>
+          </article>
+          <article class="card log">
+            <p class="cat">Bug fix · Fund Flow</p>
+            <h3>Postgres silently lowercased my columns</h3>
+            <p>After moving from SQLite to Postgres, <code>nameOrig</code> and <code>nameDest</code> raised KeyError. Postgres folds unquoted identifiers to lowercase, so my camelCase columns no longer matched the code. Quoting the identifiers in the data layer fixed it.</p>
+          </article>
+          <article class="card log">
+            <p class="cat">Evaluation fix · DocQuery</p>
+            <h3>My ground truth was misleading the metrics</h3>
+            <p>The first evaluation matched answers by keyword, which paraphrasing made unreliable. I verified the real page numbers with a script and made a strict source-and-page match the primary metric. On that metric, Recall@5 went from 76.7% (dense) to 86.7% (rerank) to 90.0% (hybrid plus rerank).</p>
+          </article>
+          <article class="card log">
+            <p class="cat">Bug fix · DocQuery</p>
+            <h3>One question searched every PDF I had uploaded</h3>
+            <p>The vector collection was global, so a chat searched across all uploaded PDFs, which could also leak one user's documents into another user's answers. I scoped both the vector retrieval and the BM25 index to the chat session ID.</p>
+          </article>
+          <article class="card log">
+            <p class="cat">Bug fix · SkillBridge</p>
+            <h3>The free LLM quota ran out</h3>
+            <p>The Mistral quota ran out, so I moved the LLM calls to Groq. Two API keys now act as one shared pool: key 1 is tried first and the app falls back to key 2 automatically. Per-user daily limits (50 chatbot messages, 10 roadmaps, 5 mock interviews, counted per interview rather than per AI call) stop one user from draining the pool.</p>
+          </article>
+          <article class="card log">
+            <p class="cat">Testing · SkillBridge</p>
+            <h3>Putting the app under automated tests</h3>
+            <p>I added a test suite to SkillBridge: 34 Python tests and 33 browser-side validation checks. Both run in CI on every push.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="sec plain-bg last">
+      <div class="wrap">
+        <div class="contact">
+          <h2>Got an internship, an idea, or a model that needs shipping?</h2>
+          <p class="c-lead">Send me an email or grab my résumé. Either way, you'll be talking to me directly.</p>
+          <a class="btn dark" href="assets/resume.pdf" download>Download résumé <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <hr />
+          <p class="c-small">Or email me at</p>
+          <p class="mail mono" id="mail-text">shivamrajeshpandey9136@gmail.com</p>
+          <div class="btn-row sm">
+            <button class="btn" type="button" id="copy-email"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M5 15V6a2 2 0 0 1 2-2h8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg><span id="copy-label">Copy email</span></button>
+            <div class="menu-wrap">
+              <button class="btn" type="button" id="write-btn" aria-haspopup="true" aria-expanded="false" aria-controls="write-menu"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M21 3 10 14M21 3l-7 18-4-7-7-4z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg>Write email <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              <ul class="menu" id="write-menu" hidden>
+                <li><a href="https://mail.google.com/mail/?view=cm&to=shivamrajeshpandey9136@gmail.com&su=Internship%20opportunity" target="_blank" rel="noopener">Gmail</a></li>
+                <li><a href="https://outlook.live.com/mail/0/deeplink/compose?to=shivamrajeshpandey9136@gmail.com&subject=Internship%20opportunity" target="_blank" rel="noopener">Outlook</a></li>
+                <li><a href="mailto:shivamrajeshpandey9136@gmail.com?subject=Internship%20opportunity">Default mail app</a></li>
+              </ul>
             </div>
           </div>
-        </div>
-
-        <div class="hero-actions resume-actions">
-          <a href="assets/resume.pdf" target="_blank" class="btn btn-secondary">View résumé</a>
-          <a href="assets/resume.pdf" class="btn btn-primary" download>Download résumé</a>
+          <p class="c-links"><a class="ulink" href="https://github.com/Shivam7977" target="_blank" rel="noopener">GitHub<span class="vh"> (opens in a new tab)</span></a><a class="ulink" href="https://www.linkedin.com/in/shivam-pandey-0336ba336/" target="_blank" rel="noopener">LinkedIn<span class="vh"> (opens in a new tab)</span></a></p>
         </div>
       </div>
-      <div class="about-photo">
-        <div class="glow-ring photo-ring">
-          <div class="glow-ring-inner photo-ring-inner">
-            <img src="assets/img/profile.jpg" alt="Shivam Pandey">
-          </div>
-        </div>
-      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap f-inner">
+      <a href="#top" class="logo"><span class="logo-mark" aria-hidden="true">SP</span><span class="logo-text">shivam<em>.dev</em></span></a>
+      <p class="mono small">© 2026 Shivam Pandey</p>
     </div>
+  </footer>
 
-    <div class="focus-grid">
-      <div class="glow-card"><div class="glow-card-inner">
-        <span class="icon-chip chip-violet"><i class="devicon-python-plain"></i></span>
-        <h3>Machine Learning</h3><p>Ensembling — XGBoost, Isolation Forest, scikit-learn.</p>
-      </div></div>
-      <div class="glow-card"><div class="glow-card-inner">
-        <span class="icon-chip chip-cyan"><span class="ti-icon">⛓</span></span>
-        <h3>Graph Analytics</h3><p>Modeling fund-flow networks with NetworkX to surface fraud topology.</p>
-      </div></div>
-      <div class="glow-card"><div class="glow-card-inner">
-        <span class="icon-chip chip-pink"><i class="devicon-flask-original"></i></span>
-        <h3>Backend Systems</h3><p>Flask + MongoDB APIs, auth, rate-limiting, clean data models.</p>
-      </div></div>
-      <div class="glow-card"><div class="glow-card-inner">
-        <span class="icon-chip chip-amber"><span class="ti-icon">⚑</span></span>
-        <h3>Fraud &amp; Risk</h3><p>Feature engineering and thresholding for highly imbalanced data.</p>
-      </div></div>
-      <div class="glow-card"><div class="glow-card-inner">
-        <span class="icon-chip chip-teal"><span class="ti-icon">✦</span></span>
-        <h3>LLM Integration</h3><p>Groq-powered roadmaps from an allow-list of profile fields, plus adaptive mock interviews.</p>
-      </div></div>
-      <div class="glow-card"><div class="glow-card-inner">
-        <span class="icon-chip chip-violet"><i class="devicon-tailwindcss-plain"></i></span>
-        <h3>Frontend</h3><p>Tailwind CSS, AJAX-driven UI, dark mode, responsive layouts.</p>
-      </div></div>
-    </div>
-  </section>
+  <!-- ============ CASE STUDY MODALS ============ -->
+  <dialog class="modal" id="case-fund" aria-labelledby="case-fund-h">
+    <button class="sq-btn close" type="button" data-close aria-label="Close case study">✕</button>
+    <p class="cat">Case study</p>
+    <h3 id="case-fund-h">Fund Flow Fraud Detection</h3>
+    <dl>
+      <dt>Problem</dt><dd>Only 0.13% of transactions are fraud, and fraudsters work in rings. A row-by-row model misses the pattern across accounts.</dd>
+      <dt>Built</dt><dd>30 engineered features (structuring, threshold flags, velocity, balance mismatch). An Isolation Forest and two XGBoost models, blended with NetworkX checks for fan-out, round-trips and structuring. TreeSHAP explains each prediction.</dd>
+      <dt>Product</dt><dd>FastAPI and Postgres backend with single, batch and CSV scoring, upload history, a PyVis graph view, and a guest mode so recruiters can try it without signing up. OTP email and Google sign-in. A security pass added XSS fixes, rate limits and hashed reset tokens.</dd>
+      <dt>Result</dt><dd>F1 0.89 and PR-AUC 0.95 on the held-out set, after a leakage audit lowered the original numbers.</dd>
+      <dt>Trade-off</dt><dd>PaySim is synthetic and the India payment-rail context (UPI, NEFT, RTGS, IMPS) is an overlay, not real bank data. It has no organic round-trips, so I tested the graph rules on injected fraud chains.</dd>
+    </dl>
+  </dialog>
 
-  <!-- ===== SKILLS / TECHNOLOGIES ===== -->
-  <section class="section" id="skills">
-    <div class="section-inner center-head">
-      <p class="eyebrow">My tools</p>
-      <h2 class="section-title glow-cyan">Technologies.</h2>
-    </div>
+  <dialog class="modal" id="case-doc" aria-labelledby="case-doc-h">
+    <button class="sq-btn close" type="button" data-close aria-label="Close case study">✕</button>
+    <p class="cat">Case study</p>
+    <h3 id="case-doc-h">DocQuery</h3>
+    <dl>
+      <dt>Problem</dt><dd>Dense-only retrieval kept missing exact terms such as names, codes and clause numbers, and most PDF chat tools send your files to a server.</dd>
+      <dt>Built</dt><dd>Hybrid retrieval: vector search and BM25, fused with Reciprocal Rank Fusion, then reranked. Answers stream with source-file and page citations.</dd>
+      <dt>Result</dt><dd>Strict Recall@5 rose from 76.7% to 90.0% on a 30-question evaluation set.</dd>
+      <dt>Privacy</dt><dd>Parsing, embeddings, retrieval and Ollama inference all run on your machine. Hosted providers are optional, not the default.</dd>
+      <dt>Trade-off</dt><dd>The evaluation set is small, so read the numbers as directional.</dd>
+    </dl>
+  </dialog>
 
-    <div class="skill-category">
-      <h3 class="skill-cat-label">Programming</h3>
-      <div class="icon-grid">
-        <div class="icon-item"><div class="glow-ring icon-ring"><div class="glow-ring-inner icon-ring-inner"><i class="devicon-python-plain"></i></div></div><span>Python</span></div>
-        <div class="icon-item"><div class="glow-ring icon-ring"><div class="glow-ring-inner icon-ring-inner"><i class="devicon-javascript-plain"></i></div></div><span>JavaScript</span></div>
-        <div class="icon-item"><div class="glow-ring icon-ring"><div class="glow-ring-inner icon-ring-inner"><i class="devicon-html5-plain"></i></div></div><span>HTML5</span></div>
-        <div class="icon-item"><div class="glow-ring icon-ring"><div class="glow-ring-inner icon-ring-inner"><i class="devicon-css3-plain"></i></div></div><span>CSS3</span></div>
-      </div>
-    </div>
+  <dialog class="modal" id="case-skill" aria-labelledby="case-skill-h">
+    <button class="sq-btn close" type="button" data-close aria-label="Close case study">✕</button>
+    <p class="cat">Case study</p>
+    <h3 id="case-skill-h">SkillBridge</h3>
+    <dl>
+      <dt>Problem</dt><dd>Students don't know what to learn next, and their resume and portfolio fall behind what they actually build.</dd>
+      <dt>Built</dt><dd>A roadmap generator (only allow-listed profile fields reach the LLM), a mock interview room with adaptive difficulty and XP, 19 resume and 6 portfolio templates, and project communities with an admin approval panel.</dd>
+      <dt>Engineering</dt><dd>Flask and MongoDB Atlas on Render. Two API keys act as a fallback pool, with per-user daily AI limits. 34 Python tests and 33 browser checks run in CI on every push.</dd>
+      <dt>Trade-off</dt><dd>Project recommendations are rule-based matching, not ML. On the free tier, synchronous LLM calls add latency and cold starts.</dd>
+    </dl>
+  </dialog>
 
-    <div class="skill-category">
-      <h3 class="skill-cat-label">Machine Learning &amp; AI</h3>
-      <div class="icon-grid">
-        <div class="icon-item"><div class="glow-ring icon-ring"><div class="glow-ring-inner icon-ring-inner"><i class="devicon-pandas-original"></i></div></div><span>Pandas</span></div>
-        <div class="icon-item"><div class="glow-ring icon-ring"><div class="glow-ring-inner icon-ring-inner"><i class="devicon-numpy-original"></i></div></div><span>NumPy</span></div>
-        <div class="icon-item"><div class="glow-ring icon-ring"><div class="glow-ring-inner icon-ring-inner"><i class="devicon-scikitlearn-plain"></i></div></div><span>scikit-learn</span></div>
-        <div class="icon-item"><div class="glow-ring icon-ring"><div class="glow-ring-inner icon-ring-inner"><span class="badge-text">XGB</span></div></div><span>XGBoost</span></div>
-        <div class="icon-item"><div class="glow-ring icon-ring"><div class="glow-ring-inner icon-ring-inner"><span class="badge-text">NX</span></div></div><span>NetworkX</span></div>
-        <div class="icon-item"><div class="glow-ring icon-ring"><div class="glow-ring-inner icon-ring-inner"><span class="badge-text">AI</span></div></div><span>Groq</span></div>
-      </div>
-    </div>
-
-    <div class="skill-category">
-      <h3 class="skill-cat-label">Backend &amp; Database</h3>
-      <div class="icon-grid">
-        <div class="icon-item"><div class="glow-ring icon-ring"><div class="glow-ring-inner icon-ring-inner"><i class="devicon-flask-original"></i></div></div><span>Flask</span></div>
-        <div class="icon-item"><div class="glow-ring icon-ring"><div class="glow-ring-inner icon-ring-inner"><i class="devicon-mongodb-plain"></i></div></div><span>MongoDB</span></div>
-        <div class="icon-item"><div class="glow-ring icon-ring"><div class="glow-ring-inner icon-ring-inner"><i class="devicon-tailwindcss-plain"></i></div></div><span>Tailwind</span></div>
-        <div class="icon-item"><div class="glow-ring icon-ring"><div class="glow-ring-inner icon-ring-inner"><span class="badge-text">bc</span></div></div><span>bcrypt</span></div>
-      </div>
-    </div>
-
-    <div class="skill-category">
-      <h3 class="skill-cat-label">Tools</h3>
-      <div class="icon-grid">
-        <div class="icon-item"><div class="glow-ring icon-ring"><div class="glow-ring-inner icon-ring-inner"><i class="devicon-git-plain"></i></div></div><span>Git</span></div>
-        <div class="icon-item"><div class="glow-ring icon-ring"><div class="glow-ring-inner icon-ring-inner"><i class="devicon-github-original"></i></div></div><span>GitHub</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== PROJECTS ===== -->
-  <section class="section" id="projects">
-    <div class="section-inner">
-      <p class="eyebrow">My work</p>
-      <h2 class="section-title grad-text-soft">Projects.</h2>
-      <p class="body-text">The two projects I've put the most into — one live and in use, one a deep dive into fraud analytics.</p>
-    </div>
-
-    <div class="project-grid">
-
-      <article class="project-card">
-        <div class="project-thumb thumb-skillbridge">
-          <div class="thumb-deco" aria-hidden="true">
-            <span class="deco-blob blob-1"></span><span class="deco-blob blob-2"></span>
-            <span class="deco-ring"></span>
-          </div>
-          <span class="thumb-title">SkillBridge</span>
-          <div class="thumb-actions">
-            <a href="https://github.com/Shivam7977/SkillBridge-Platform" target="_blank" rel="noopener" aria-label="Code"><i class="devicon-github-original"></i></a>
-            <a href="https://skillbridge-platform-bszo.onrender.com/" target="_blank" rel="noopener" aria-label="Live demo">↗</a>
-          </div>
-        </div>
-        <div class="project-info">
-          <p><strong>AI-Powered Career OS for developers.</strong> Takes your current skills and career goal, generates a personalized stage-by-stage roadmap, and automatically builds your portfolio and resume as you progress.</p>
-          <ul class="feature-checklist">
-            <li>AI Mock Interview Room with adaptive difficulty and XP rewards</li>
-            <li>Groq-powered roadmap generator; only an allow-list of profile fields reaches the LLM</li>
-            <li>ATS-friendly resume builder &amp; portfolio generator</li>
-            <li>Community hub, XP/streaks/leaderboards, admin dashboard</li>
-          </ul>
-          <ul class="project-tags">
-            <li>Flask</li><li>MongoDB</li><li>Groq</li><li>AJAX</li><li>Tailwind CSS</li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <div class="project-thumb thumb-fundflow">
-          <div class="thumb-deco" aria-hidden="true">
-            <span class="deco-blob blob-3"></span><span class="deco-blob blob-4"></span>
-            <span class="deco-ring ring-2"></span>
-          </div>
-          <span class="thumb-title">Fund Flow</span>
-          <div class="thumb-actions">
-            <a href="https://github.com/Shivam7977/fund-flow-fraud" target="_blank" rel="noopener" aria-label="Code"><i class="devicon-github-original"></i></a>
-            <a href="https://nbviewer.org/github/Shivam7977/fund-flow-fraud/blob/main/notebooks/01_EDA.ipynb" target="_blank" rel="noopener" aria-label="View notebook">↗</a>
-          </div>
-        </div>
-        <div class="project-info">
-          <p>A fraud-detection system mapped onto India's payment rails (UPI, NEFT, RTGS, IMPS, NACH), built on the PaySim dataset (6.36M transactions).</p>
-          <ul class="feature-checklist">
-            <li>Isolation Forest + 2 XGBoost models, combined with NetworkX graph patterns</li>
-            <li>Held-out result: <strong>F1 0.89</strong> · <strong>PR-AUC 0.95</strong></li>
-            <li>NetworkX graph patterns for round-trip, structuring, and fan-in/fan-out</li><li>TreeSHAP explains XGBoost predictions; leakage audit improved evaluation reliability</li>
-            <li>Trade-off: PaySim is synthetic, so real-world performance will differ</li>
-          </ul>
-          <ul class="project-tags">
-            <li>Python</li><li>FastAPI</li><li>PostgreSQL</li><li>XGBoost</li><li>NetworkX</li><li>SHAP</li>
-          </ul>
-        </div>
-      </article>
-
-    </div>
-
-    <div class="more-projects">
-      <a href="https://github.com/Shivam7977" target="_blank" rel="noopener" class="btn btn-secondary">More on GitHub <i class="devicon-github-original"></i></a>
-    </div>
-  </section>
-
-  <!-- ===== CERTIFICATIONS & ACHIEVEMENTS ===== -->
-  <section class="section" id="achievements">
-    <div class="section-inner">
-      <p class="eyebrow">Beyond the code</p>
-      <h2 class="section-title grad-text-soft">Certifications &amp; Achievements.</h2>
-    </div>
-
-    <div class="dual-grid">
-      <div>
-        <h3 class="sub-head">Certifications</h3>
-        <div class="glow-card cert-card"><div class="glow-card-inner cert-card-inner">
-          <span class="icon-chip chip-cyan">📜</span>
-          <div>
-            <h4>Python for Data Science</h4>
-            <p>NPTEL (IIT Madras) · Elite Certification · Jul–Aug 2025</p>
-          </div>
-        </div></div>
-        <div class="glow-card cert-card"><div class="glow-card-inner cert-card-inner">
-          <span class="icon-chip chip-teal">📜</span>
-          <div>
-            <h4>Prime — AI/ML Job Preparation <span class="status-tag">In Progress</span></h4>
-            <p>Apna College · Started Mar 2026 · Currently: Python &amp; Data (Pandas, NumPy)</p>
-          </div>
-        </div></div>
-      </div>
-
-      <div>
-        <h3 class="sub-head">Hackathons</h3>
-        <div class="glow-card cert-card"><div class="glow-card-inner cert-card-inner">
-          <span class="icon-chip chip-amber">🏆</span>
-          <div>
-            <h4>Smart India Hackathon (SIH)</h4>
-            <p>Selected at college-level internal round</p>
-          </div>
-        </div></div>
-        <div class="glow-card cert-card"><div class="glow-card-inner cert-card-inner">
-          <span class="icon-chip chip-pink">🏆</span>
-          <div>
-            <h4>Aarohan 1.0 Hackathon</h4>
-            <p>Team Pi · Certificate of Participation · CSI-RAIT</p>
-          </div>
-        </div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== GITHUB ACTIVITY ===== -->
-  <section class="section" id="github-activity">
-    <div class="section-inner center-head">
-      <p class="eyebrow">Always shipping</p>
-      <h2 class="section-title glow-cyan">GitHub Activity.</h2>
-    </div>
-    <div class="github-embed">
-      <img src="https://github-readme-stats.vercel.app/api?username=Shivam7977&show_icons=true&theme=midnight-purple&hide_border=true&bg_color=00000000" alt="Shivam's GitHub stats" loading="lazy">
-      <img src="https://github-readme-streak-stats.herokuapp.com/?user=Shivam7977&theme=midnight-purple&hide_border=true&background=00000000" alt="Shivam's GitHub streak" loading="lazy">
-    </div>
-    <div class="more-projects">
-      <a href="https://github.com/Shivam7977" target="_blank" rel="noopener" class="btn btn-secondary">@Shivam7977 on GitHub <i class="devicon-github-original"></i></a>
-    </div>
-  </section>
-
-  <!-- ===== CONTACT ===== -->
-  <section class="section" id="contact">
-    <div class="section-inner contact-grid">
-      <div class="contact-copy">
-        <p class="eyebrow">Get in touch</p>
-        <h2 class="section-title grad-text-soft">Contact.</h2>
-        <p class="body-text">Open to AI/ML and Data Science internships and roles. Drop a message, or reach me directly:</p>
-        <ul class="contact-list">
-          <li>📍 Mumbai, India</li>
-          <li><a href="mailto:shivamrajeshpandey9136@gmail.com">shivamrajeshpandey9136@gmail.com</a></li>
-          <li><a href="https://github.com/Shivam7977" target="_blank" rel="noopener">github.com/Shivam7977</a></li>
-          <li><a href="https://www.linkedin.com/in/shivam-pandey-0336ba336/" target="_blank" rel="noopener">linkedin.com/in/shivam-pandey</a></li>
-        </ul>
-      </div>
-
-      <form class="glow-card contact-form-wrap" id="contactFormWrap" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-        <div class="glow-card-inner contact-form-inner">
-          <input type="hidden" name="form-name" value="contact">
-          <p class="hidden-field"><label>Don't fill this out: <input name="bot-field"></label></p>
-          <div class="field"><label for="name">Your name</label><input type="text" id="name" name="name" placeholder="Anjali Pandey" required></div>
-          <div class="field"><label for="email">Your email</label><input type="email" id="email" name="email" placeholder="name@company.com" required></div>
-          <div class="field"><label for="subject">Subject</label><input type="text" id="subject" name="subject" placeholder="Internship opportunity"></div>
-          <div class="field"><label for="message">Message</label><textarea id="message" name="message" rows="4" placeholder="What's on your mind?" required></textarea></div>
-          <button type="submit" class="btn btn-primary btn-full" id="contactSubmit">Send message</button>
-          <p class="form-status" id="formStatus"></p>
-        </div>
-      </form>
-    </div>
-  </section>
-
-</main>
-
-<footer class="footer">
-  <div class="footer-inner">
-    <span>© 2026 Shivam Pandey</span>
-    <div class="footer-socials">
-      <a href="https://github.com/Shivam7977" target="_blank" rel="noopener" aria-label="GitHub"><i class="devicon-github-original"></i></a>
-      <a href="https://www.linkedin.com/in/shivam-pandey-0336ba336/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="devicon-linkedin-plain"></i></a>
-    </div>
-  </div>
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
