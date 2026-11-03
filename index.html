@@ -37,6 +37,7 @@
         <a href="#services" class="nav-link">Services</a>
         <a href="#about" class="nav-link">About</a>
         <a href="#skills" class="nav-link">Skills</a>
+        <a href="#github" class="nav-link">GitHub</a>
         <a href="#blog" class="nav-link">Bug log</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
@@ -208,8 +209,8 @@
             <li><span class="mono">Live</span><a class="ulink" href="#work">Fund Flow Fraud Detection</a></li>
             <li><span class="mono">Live</span><a class="ulink" href="#work">SkillBridge</a></li>
             <li><span class="mono">Local</span><a class="ulink" href="#work">DocQuery</a></li>
-            <li><span class="mono">Building</span><span><b>Improving DocQuery retrieval</b> <span class="muted"></span></span></li>
-            <li><span class="mono">Building</span><span><b>Improving the Fund Flow model</b> <span class="muted"></span></span></li>
+            <li><span class="mono">Building</span><span><b>Improving DocQuery retrieval</b> <span class="muted">(in progress)</span></span></li>
+            <li><span class="mono">Building</span><span><b>Improving the Fund Flow model</b> <span class="muted">(in progress)</span></span></li>
             <li><span class="mono">Learning</span><span><b>Apna College Prime AI/ML</b> <span class="muted">(since Mar 2026)</span></span></li>
             <li><span class="mono">Certified</span><span><b>NPTEL Python for Data Science</b> <span class="muted">(IIT Madras, Elite)</span></span></li>
           </ul>
@@ -234,8 +235,44 @@
       </div>
     </section>
 
+    <!-- ============ GITHUB ============ -->
+    <section id="github" class="sec grid-bg">
+      <div class="wrap">
+        <h2>GitHub</h2>
+
+        <div class="gh-layout">
+          <aside class="card gh-profile">
+            <img class="gh-avatar" src="https://github.com/Shivam7977.png?size=240" alt="Shivam7977 on GitHub" width="96" height="96" loading="lazy" onerror="this.remove()" />
+            <h3>Shivam Pandey</h3>
+            <p class="mono gh-handle">@Shivam7977</p>
+            <ul class="gh-stats" id="gh-stats" hidden>
+              <li><b id="gh-repos">0</b><span>Public repos</span></li>
+              <li><b id="gh-followers">0</b><span>Followers</span></li>
+            </ul>
+            <a class="btn primary" href="https://github.com/Shivam7977" target="_blank" rel="noopener">View profile <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="vh"> (opens in a new tab)</span></a>
+          </aside>
+
+          <div class="gh-repos" id="repo-list">
+            <article class="card repo"><a class="ulink mono" href="https://github.com/Shivam7977/fund-flow-fraud" target="_blank" rel="noopener">fund-flow-fraud</a><p>Fund flow fraud detection with ML and graph analytics.</p><span class="mono meta">Jupyter Notebook</span></article>
+            <article class="card repo"><a class="ulink mono" href="https://github.com/Shivam7977/DocQuery" target="_blank" rel="noopener">DocQuery</a><p>Private PDF Q&amp;A with hybrid retrieval and page-level citations.</p><span class="mono meta">Python</span></article>
+            <article class="card repo"><a class="ulink mono" href="https://github.com/Shivam7977/SkillBridge-Platform" target="_blank" rel="noopener">SkillBridge-Platform</a><p>AI career platform: roadmaps, mock interviews, resume and portfolio builder.</p><span class="mono meta">HTML</span></article>
+          </div>
+        </div>
+
+        <div class="card gh-graph">
+          <div class="gh-graph-head">
+            <h3>Contributions</h3>
+            <p class="mono" id="gh-total" hidden></p>
+          </div>
+          <div id="gh-graph-holder">
+            <div class="gh-graph-img"><img src="https://ghchart.rshah.org/ff7a00/Shivam7977" alt="GitHub contribution graph for Shivam7977" loading="lazy" onerror="this.closest('.gh-graph').remove()" /></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ BUG LOG ============ -->
-    <section id="blog" class="sec grid-bg">
+    <section id="blog" class="sec plain-bg">
       <div class="wrap">
         <h2>Bug log</h2>
         <p class="sec-lead">Real bugs I tracked down while building these projects.</p>
@@ -275,7 +312,7 @@
     </section>
 
     <!-- ============ CONTACT ============ -->
-    <section id="contact" class="sec plain-bg last">
+    <section id="contact" class="sec grid-bg last">
       <div class="wrap">
         <div class="contact">
           <h2>Got an internship, an idea, or a model that needs shipping?</h2>
