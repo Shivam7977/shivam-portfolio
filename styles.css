@@ -119,11 +119,12 @@ code { font-family: var(--mono); font-size: .85em; border: 1.5px solid var(--ink
 
 /* ================= Hero ================= */
 .hero-sec { padding-block: 0; }
+.hero > * { min-width: 0; }
 .hero { display: grid; grid-template-columns: 1.25fr .75fr; gap: 72px; align-items: center; padding-block: 110px 120px; min-height: calc(100svh - 90px); }
-.hero h1 { font-size: clamp(2.6rem, 5.6vw, 4.6rem); font-weight: 800; line-height: 1.04; letter-spacing: -.045em; margin-bottom: 26px; max-width: 14ch; text-wrap: balance; }
+.hero h1 { font-size: clamp(2.2rem, 5.6vw, 4.6rem); font-weight: 800; line-height: 1.04; letter-spacing: -.045em; margin-bottom: 26px; max-width: 14ch; text-wrap: balance; }
 .lead { font-size: 1.28rem; font-weight: 400; color: var(--ink); opacity: .85; max-width: 44ch; margin-bottom: 36px; line-height: 1.6; }
 .photo { position: relative; justify-self: end; width: min(100%, 440px); }
-.photo img { width: 100%; aspect-ratio: 5 / 6; object-fit: cover; border: 3px solid var(--ink); border-radius: 16px; box-shadow: 14px 14px 0 var(--ink); background: var(--card); }
+.photo img { width: 100%; height: auto; aspect-ratio: 5 / 6; object-fit: cover; border: 3px solid var(--ink); border-radius: 16px; box-shadow: 14px 14px 0 var(--ink); background: var(--card); }
 .tag { position: absolute; left: -26px; bottom: 36px; transform: rotate(-4deg); background: var(--card); border: var(--b) solid var(--ink); border-radius: 10px; box-shadow: 4px 4px 0 var(--ink); padding: 10px 18px; font-family: var(--mono); font-weight: 700; font-size: 1.05rem; }
 
 /* ================= Work ================= */
@@ -174,6 +175,29 @@ code { font-family: var(--mono); font-size: .85em; border: 1.5px solid var(--ink
 .started .mono { font-size: .9rem; color: var(--muted); }
 .started li .ulink, .started li b { font-size: 1.15rem; font-weight: 700; }
 .started .muted { font-size: 1.05rem; }
+
+/* ================= Education & certificates ================= */
+.sec h2 + .edu { margin-top: 40px; }
+.sub-h2 { margin-top: 84px; }
+.sec h2.sub-h2 + .cert-grid { margin-top: 40px; }
+.edu { --sh: 10px; padding: 36px 38px; display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center; }
+.edu-year { font-size: .9rem; color: var(--muted); margin-bottom: 6px; }
+.edu h3 { font-size: clamp(1.7rem, 3vw, 2.3rem); font-weight: 800; letter-spacing: -.03em; line-height: 1.1; margin-bottom: 10px; }
+.edu-degree { font-size: 1.15rem; max-width: 46ch; margin-bottom: 6px; }
+.cgpi { background: var(--orange); color: var(--on-orange); border: var(--b) solid var(--ink); border-radius: 12px; box-shadow: 6px 6px 0 var(--ink); padding: 22px 34px; text-align: center; display: flex; flex-direction: column; line-height: 1.1; }
+.cgpi b { font-size: clamp(3rem, 6vw, 4.4rem); font-weight: 800; letter-spacing: -.05em; }
+.cgpi span { font-size: .9rem; font-weight: 700; margin-top: 4px; }
+.cert-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
+.cert { padding: 28px 30px 30px; transition: transform .2s, box-shadow .2s; }
+.cert:hover { transform: translate(-2px, -2px); box-shadow: 10px 10px 0 var(--ink); }
+.cert-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; font-size: .9rem; color: var(--muted); }
+.badge-sm { font-family: var(--mono); font-weight: 700; font-size: .85rem; color: #141414; background: var(--orange); border: var(--b) solid var(--ink); border-radius: 6px; padding: 3px 12px; }
+.cert h3 { font-size: 1.7rem; font-weight: 800; letter-spacing: -.03em; line-height: 1.15; margin-bottom: 4px; }
+.issuer { font-weight: 600; margin-bottom: 18px; }
+.cert .cat { margin-bottom: 8px; }
+.cert ul { display: grid; gap: 8px; }
+.cert li { position: relative; padding-left: 22px; color: var(--muted); }
+.cert li::before { content: ""; position: absolute; left: 0; top: .6em; width: 9px; height: 9px; background: var(--orange); border: 1.5px solid var(--ink); border-radius: 2px; }
 
 /* ================= Skills ================= */
 .skills { padding: 14px 32px; --sh: 10px; }
@@ -282,8 +306,8 @@ code { font-family: var(--mono); font-size: .85em; border: 1.5px solid var(--ink
   .about { grid-template-columns: 1fr; gap: 48px; }
 }
 @media (max-width: 860px) {
-  .hero { grid-template-columns: 1fr; gap: 56px; padding-block: 64px 80px; min-height: 0; }
-  .photo { justify-self: start; width: min(100%, 380px); margin-left: 20px; }
+  .hero { grid-template-columns: minmax(0, 1fr); gap: 56px; padding-block: 64px 80px; min-height: 0; }
+  .photo { justify-self: center; width: min(calc(100% - 14px), 380px); margin: 0; }
   .project-grid, .log-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 640px) {
@@ -306,9 +330,48 @@ code { font-family: var(--mono); font-size: .85em; border: 1.5px solid var(--ink
   .gh-profile { max-width: none; }
   .titlecard { grid-template-columns: 1fr; padding: 6%; }
   .tc-panel { display: none; }
+  .photo { justify-self: start; }
   .tag { left: -12px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   * { transition: none !important; }
+}
+
+@media (max-width: 860px) {
+  .edu { grid-template-columns: 1fr; }
+  .cgpi { justify-self: start; }
+  .cert-grid { grid-template-columns: 1fr; }
+  .sub-h2 { margin-top: 64px; }
+}
+@media (max-width: 640px) {
+  .edu { padding: 26px 22px; }
+  .cert { padding: 24px 22px; }
+}
+
+@media (max-width: 380px) {
+  .nav-inner { gap: 12px; }
+  .logo { gap: 8px; }
+  .logo-text { font-size: 1.1rem; }
+  .logo-mark { width: 36px; height: 36px; font-size: .9rem; }
+  .sq-btn { width: 42px; height: 42px; }
+  .nav-tools { gap: 8px; }
+}
+
+/* Title cards: keep the top strip free for the Live / Runs locally badge, and size the text from the card's own width */
+.shot { container-type: inline-size; }
+.titlecard { padding: 64px 6% 6%; }
+@supports (font-size: 1cqw) {
+  .tc-text strong { font-size: clamp(1.5rem, 8cqw, 3rem); }
+  .tc-text span { font-size: clamp(.9rem, 3.4cqw, 1.3rem); }
+  .tc-text small { font-size: clamp(.66rem, 2cqw, .8rem); }
+  .tc-panel b { font-size: clamp(1rem, 3.8cqw, 1.5rem); }
+  .tc-panel i { font-size: clamp(.6rem, 1.8cqw, .76rem); }
+}
+@media (max-width: 640px) {
+  .shot { aspect-ratio: 16 / 11; }
+  .titlecard { padding: 60px 20px 16px; }
+}
+@media (max-width: 360px) {
+  .tc-text small { display: none; }
 }

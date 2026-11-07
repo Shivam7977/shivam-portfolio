@@ -197,8 +197,8 @@
       <div class="wrap about">
         <div class="about-text">
           <h2>About</h2>
-          <p>I'm Shivam Pandey, a final-year B.E. student in Computer Science and Engineering (AI/ML) at VIVA Institute of Technology, Mumbai. I care about two things: models that are evaluated honestly, and code that holds up when someone else touches it.</p>
-          <p>Fund Flow started with a headline AUC of 0.9998. I audited it for leakage, rebuilt the evaluation, and reported the lower held-out numbers instead. I'd rather ship a smaller number I can defend.</p>
+          <p>I'm Shivam Pandey, a final-year B.Tech student in Computer Science and Engineering (AI/ML) at VIVA Institute of Technology, Mumbai (CGPI 8.82/10). I care about two things: models that are evaluated honestly, and code that holds up when someone else touches it.</p>
+          <p>Fund Flow's first PR-AUC was 0.998, which looked too good. A TreeSHAP audit found a simulator artifact and velocity features that counted the current transaction. I removed both, the score dropped to 0.97, and after re-tuning on a separate split the held-out result is F1 0.89 and PR-AUC 0.95. I'd rather ship a smaller number I can defend.</p>
           <p>I'm looking for Data Science, ML Engineering and AI Engineering internships, in Mumbai or remote.</p>
         </div>
 
@@ -218,8 +218,54 @@
       </div>
     </section>
 
+    <!-- ============ EDUCATION & CERTIFICATES ============ -->
+    <section id="education" class="sec plain-bg">
+      <div class="wrap">
+        <h2>Education</h2>
+        <article class="card edu">
+          <div class="edu-main">
+            <p class="mono edu-year">Class of 2027</p>
+            <h3>VIVA Institute of Technology</h3>
+            <p class="edu-degree">B.Tech in Computer Science and Engineering (Artificial Intelligence and Machine Learning)</p>
+            <p class="muted">University of Mumbai · Mumbai</p>
+          </div>
+          <div class="cgpi" aria-label="CGPI 8.82 out of 10">
+            <b>8.82</b>
+            <span class="mono">CGPI / 10</span>
+          </div>
+        </article>
+
+        <h2 id="certificates" class="sub-h2">Certificates</h2>
+        <div class="cert-grid">
+          <article class="card cert">
+            <div class="cert-top"><span class="badge-sm">Elite</span><span class="mono">2025</span></div>
+            <h3>Python for Data Science</h3>
+            <p class="issuer">NPTEL · IIT Madras</p>
+            <p class="cat">What I learned</p>
+            <ul>
+              <li>NumPy and Pandas</li>
+              <li>EDA with matplotlib and seaborn</li>
+              <li>Regression and classification case studies</li>
+            </ul>
+          </article>
+          <article class="card cert">
+            <div class="cert-top"><span class="badge-sm">Course</span><span class="mono">2026</span></div>
+            <h3>AI/ML Course</h3>
+            <p class="issuer">Apna College</p>
+            <p class="cat">What I learned</p>
+            <ul>
+              <li>Supervised and unsupervised learning</li>
+              <li>Precision, recall and F1</li>
+              <li>Neural networks and NLP</li>
+              <li>RAG and LLM agents</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ SKILLS ============ -->
-    <section id="skills" class="sec plain-bg">
+    <section id="skills" class="sec grid-bg">
       <div class="wrap">
         <h2>Skills</h2>
         <p class="sec-lead">What I use to build and evaluate things.</p>
@@ -236,7 +282,7 @@
     </section>
 
     <!-- ============ GITHUB ============ -->
-    <section id="github" class="sec grid-bg">
+    <section id="github" class="sec plain-bg">
       <div class="wrap">
         <h2>GitHub</h2>
 
@@ -272,7 +318,7 @@
     </section>
 
     <!-- ============ BUG LOG ============ -->
-    <section id="blog" class="sec plain-bg">
+    <section id="blog" class="sec grid-bg">
       <div class="wrap">
         <h2>Bug log</h2>
         <p class="sec-lead">Real bugs I tracked down while building these projects.</p>
@@ -312,7 +358,7 @@
     </section>
 
     <!-- ============ CONTACT ============ -->
-    <section id="contact" class="sec grid-bg last">
+    <section id="contact" class="sec plain-bg last">
       <div class="wrap">
         <div class="contact">
           <h2>Got an internship, an idea, or a model that needs shipping?</h2>
